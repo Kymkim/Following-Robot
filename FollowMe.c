@@ -29,11 +29,17 @@
 #include <stdint.h>
 #include "Motors.h"
 
+#define LEFT_DIST_FAR 1000
+#define LEFT_DIST_FOLLOW 1500
+#define LEFT_DIST_CLOSE 3000
 
-// move the following constant definitions to ADC0SS3.h
-#define TOO_FAR 		(1000)  // replace the zero with the ADC output value for maximum distance
-#define FOLLOW_DIST (1500)  // replace the zero with the ADC output value for object following distance
-#define TOO_CLOSE 	(3000)  // replace the zero with the ADC output value for minimum distance
+#define RIGHT_DIST_FAR 1000
+#define RIGHT_DIST_FOLLOW 1500
+#define RIGHT_DIST_CLOSE 3000
+
+#define FRONT_DIST_FAR 1000
+#define FRONT_DIST_FOLLOW 1500
+#define FRONT_DIST_CLOSE 3000
 
 
 void PORTF_Init(void);

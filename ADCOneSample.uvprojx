@@ -135,11 +135,11 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>4097</DriverSelection>
+            <DriverSelection>4096</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -396,29 +396,19 @@
               <FilePath>.\PLL.c</FilePath>
             </File>
             <File>
-              <FileName>ADC0SS3.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\ADC0SS3.c</FilePath>
-            </File>
-            <File>
               <FileName>Motors.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Motors.c</FilePath>
             </File>
             <File>
-              <FileName>FollowMe.c</FileName>
+              <FileName>IRADCInit.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\FollowMe.c</FilePath>
+              <FilePath>.\IRADCInit.c</FilePath>
             </File>
             <File>
-              <FileName>ObjectFollower.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\ObjectFollower.h</FilePath>
-            </File>
-            <File>
-              <FileName>ObjectFollower.c</FileName>
+              <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\ObjectFollower.c</FilePath>
+              <FilePath>.\main.c</FilePath>
             </File>
           </Files>
         </Group>
