@@ -60,15 +60,12 @@ Section Cross References
     main.o(.text.main) refers to motors.o(.text.Dir_Init) for Dir_Init
     main.o(.text.main) refers to motors.o(.text.Set_L_Speed) for Set_L_Speed
     main.o(.text.main) refers to motors.o(.text.Set_R_Speed) for Set_R_Speed
-    main.o(.text.main) refers to motors.o(.text.Start_Both_Wheels) for Start_Both_Wheels
     main.o(.text.main) refers to main.o(.text.object_follower) for object_follower
     main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
     main.o(.text.object_follower) refers to iradcinit.o(.text.FIR_Left) for FIR_Left
     main.o(.text.object_follower) refers to iradcinit.o(.text.FIR_Right) for FIR_Right
     main.o(.text.object_follower) refers to iradcinit.o(.text.FIR_Front) for FIR_Front
     main.o(.text.object_follower) refers to motors.o(.text.Start_Both_Wheels) for Start_Both_Wheels
-    main.o(.text.object_follower) refers to motors.o(.text.Set_L_Speed) for Set_L_Speed
-    main.o(.text.object_follower) refers to motors.o(.text.Set_R_Speed) for Set_R_Speed
     main.o(.text.object_follower) refers to motors.o(.text.Stop_Both_Wheels) for Stop_Both_Wheels
     main.o(.ARM.exidx.text.object_follower) refers to main.o(.text.object_follower) for [Anonymous Symbol]
     main.o(.text.wall_follower) refers to iradcinit.o(.text.FIR_Left) for FIR_Left
@@ -215,11 +212,11 @@ Removing Unused input sections from the image.
     Removing main.o(.text), (0 bytes).
     Removing main.o(.ARM.exidx.text.main), (8 bytes).
     Removing main.o(.ARM.exidx.text.object_follower), (8 bytes).
-    Removing main.o(.text.wall_follower), (294 bytes).
+    Removing main.o(.text.wall_follower), (298 bytes).
     Removing main.o(.ARM.exidx.text.wall_follower), (8 bytes).
     Removing main.o(.ARM.use_no_argv), (4 bytes).
 
-32 unused section(s) (total 854 bytes) removed from the image.
+32 unused section(s) (total 858 bytes) removed from the image.
 
 ==============================================================================
 
@@ -362,8 +359,8 @@ Image Symbol Table
     [Anonymous Symbol]                       0x000009a8   Section        0  motors.o(.text.Stop_R)
     [Anonymous Symbol]                       0x000009bc   Section        0  motors.o(.text.Wheels_PWM_Init)
     [Anonymous Symbol]                       0x00000ab0   Section        0  main.o(.text.main)
-    [Anonymous Symbol]                       0x00000af0   Section        0  iradcinit.o(.text.med)
-    [Anonymous Symbol]                       0x00000b90   Section        0  main.o(.text.object_follower)
+    [Anonymous Symbol]                       0x00000aec   Section        0  iradcinit.o(.text.med)
+    [Anonymous Symbol]                       0x00000b8c   Section        0  main.o(.text.object_follower)
     .bss                                     0x20000010   Section       96  libspace.o(.bss)
     FIR_Front.f_middle                       0x20000070   Data           2  iradcinit.o(.bss.FIR_Front.f_middle)
     [Anonymous Symbol]                       0x20000070   Section        0  iradcinit.o(.bss.FIR_Front.f_middle)
@@ -627,11 +624,11 @@ Image Symbol Table
     Stop_L                                   0x00000995   Thumb Code    18  motors.o(.text.Stop_L)
     Stop_R                                   0x000009a9   Thumb Code    18  motors.o(.text.Stop_R)
     Wheels_PWM_Init                          0x000009bd   Thumb Code   242  motors.o(.text.Wheels_PWM_Init)
-    main                                     0x00000ab1   Thumb Code    64  main.o(.text.main)
-    med                                      0x00000af1   Thumb Code   160  iradcinit.o(.text.med)
-    object_follower                          0x00000b91   Thumb Code   506  main.o(.text.object_follower)
-    Region$$Table$$Base                      0x00000d8c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00000dac   Number         0  anon$$obj.o(Region$$Table)
+    main                                     0x00000ab1   Thumb Code    60  main.o(.text.main)
+    med                                      0x00000aed   Thumb Code   160  iradcinit.o(.text.med)
+    object_follower                          0x00000b8d   Thumb Code   424  main.o(.text.object_follower)
+    Region$$Table$$Base                      0x00000d34   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00000d54   Number         0  anon$$obj.o(Region$$Table)
     speeds                                   0x20000000   Data          10  motors.o(.data.speeds)
     __libspace_start                         0x20000010   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20000070   Data           0  libspace.o(.bss)
@@ -645,9 +642,9 @@ Memory Map of the image
 
   Image Entry point : 0x0000026d
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x00000db8, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00000d60, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000dac, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000d54, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -744,21 +741,20 @@ Memory Map of the image
     0x000009ba   0x000009ba   0x00000002   PAD
     0x000009bc   0x000009bc   0x000000f2   Code   RO           21    .text.Wheels_PWM_Init  motors.o
     0x00000aae   0x00000aae   0x00000002   PAD
-    0x00000ab0   0x00000ab0   0x00000040   Code   RO           83    .text.main          main.o
-    0x00000af0   0x00000af0   0x000000a0   Code   RO           64    .text.med           iradcinit.o
-    0x00000b90   0x00000b90   0x000001fa   Code   RO           85    .text.object_follower  main.o
-    0x00000d8a   0x00000d8a   0x00000002   PAD
-    0x00000d8c   0x00000d8c   0x00000020   Data   RO          264    Region$$Table       anon$$obj.o
+    0x00000ab0   0x00000ab0   0x0000003c   Code   RO           83    .text.main          main.o
+    0x00000aec   0x00000aec   0x000000a0   Code   RO           64    .text.med           iradcinit.o
+    0x00000b8c   0x00000b8c   0x000001a8   Code   RO           85    .text.object_follower  main.o
+    0x00000d34   0x00000d34   0x00000020   Data   RO          264    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00000dac, Size: 0x0000000c, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00000d54, Size: 0x0000000c, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x00000dac   0x0000000a   Data   RW           46    .data.speeds        motors.o
+    0x20000000   0x00000d54   0x0000000a   Data   RW           46    .data.speeds        motors.o
 
 
-    Execution Region ER_ZI (Exec base: 0x20000010, Load base: 0x00000db8, Size: 0x00000470, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ZI (Exec base: 0x20000010, Load base: 0x00000d60, Size: 0x00000470, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -770,7 +766,7 @@ Memory Map of the image
     0x20000078        -       0x00000002   Zero   RW           75    .bss.FIR_Right.r_middle  iradcinit.o
     0x2000007a        -       0x00000002   Zero   RW           74    .bss.FIR_Right.r_oldest  iradcinit.o
     0x2000007c        -       0x00000002   Zero   RW           45    .bss.curr_speed_idx  motors.o
-    0x2000007e   0x00000db8   0x00000002   PAD
+    0x2000007e   0x00000d60   0x00000002   PAD
     0x20000080        -       0x00000000   Zero   RW            2    HEAP                startup.o
     0x20000080        -       0x00000400   Zero   RW            1    STACK               startup.o
 
@@ -783,15 +779,15 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
        806          0          0          0         12       2103   iradcinit.o
-       570          0          0          0          0       1544   main.o
+       484          0          0          0          0       1479   main.o
        914          0          0         10          2       2196   motors.o
        132          0          0          0          0        440   pll.o
        692        632          0          0       1024        972   startup.o
 
     ----------------------------------------------------------------------
-      3144        632         32         12       1040       7255   Object Totals
+      3056        632         32         12       1040       7190   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        30          0          0          2          2          0   (incl. Padding)
+        28          0          0          2          2          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -838,15 +834,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      3468        648         32         12       1136       7739   Grand Totals
-      3468        648         32         12       1136       7739   ELF Image Totals
-      3468        648         32         12          0          0   ROM Totals
+      3380        648         32         12       1136       7674   Grand Totals
+      3380        648         32         12       1136       7674   ELF Image Totals
+      3380        648         32         12          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 3500 (   3.42kB)
+    Total RO  Size (Code + RO Data)                 3412 (   3.33kB)
     Total RW  Size (RW Data + ZI Data)              1148 (   1.12kB)
-    Total ROM Size (Code + RO Data + RW Data)       3512 (   3.43kB)
+    Total ROM Size (Code + RO Data + RW Data)       3424 (   3.34kB)
 
 ==============================================================================
 

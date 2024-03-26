@@ -30,17 +30,17 @@
 #include <stdint.h>
 #include "Motors.h"
 
-#define LEFT_DIST_FAR 1000
-#define LEFT_DIST_FOLLOW 1500
-#define LEFT_DIST_CLOSE 3000
+#define LEFT_DIST_FAR 1500
+#define LEFT_DIST_FOLLOW 2400
+#define LEFT_DIST_CLOSE 2900
 
-#define RIGHT_DIST_FAR 1000
-#define RIGHT_DIST_FOLLOW 1500
-#define RIGHT_DIST_CLOSE 3000
+#define RIGHT_DIST_FAR 1500
+#define RIGHT_DIST_FOLLOW 2400
+#define RIGHT_DIST_CLOSE 2900
 
-#define FRONT_DIST_FAR 1000
-#define FRONT_DIST_FOLLOW 1500
-#define FRONT_DIST_CLOSE 3000
+#define FRONT_DIST_FAR 1500
+#define FRONT_DIST_FOLLOW 2400
+#define FRONT_DIST_CLOSE 2800
 
 void object_follower();
 
@@ -55,7 +55,6 @@ int main(void){
 	DIRECTION = FORWARD;
 	Set_L_Speed(SPEED_35);
 	Set_R_Speed(SPEED_35);
-	Start_Both_Wheels();
 	
 	volatile uint16_t LEFT_IR, RIGHT_IR, FRONT_IR;
 	
@@ -81,9 +80,12 @@ void object_follower(){
 		RIGHT_IR = FIR_Right();
 		FRONT_IR = FIR_Front();
 	} while (
-		((FRONT_IR>FRONT_DIST_CLOSE)	||	(FRONT_IR<FRONT_DIST_FAR))	&&
-		((LEFT_IR>LEFT_DIST_CLOSE)		||	(LEFT_IR<LEFT_DIST_FAR))		&&
-		((RIGHT_IR>RIGHT_DIST_CLOSE)	||	(RIGHT_IR<FRONT_DIST_FAR))
+		(FRONT_IR>FRONT_DIST_CLOSE)	||	
+		(FRONT_IR<FRONT_DIST_FAR)	|| 
+		(LEFT_IR>LEFT_DIST_CLOSE) || 
+		(LEFT_IR<LEFT_DIST_FAR)	|| 
+		(RIGHT_IR>RIGHT_DIST_CLOSE)	||	
+		(RIGHT_IR<FRONT_DIST_FAR)
 	);
 		
   while (
@@ -102,6 +104,7 @@ void object_follower(){
 		}
 		else if (FRONT_IR<FRONT_DIST_FOLLOW) { // negative logic: too far, move forward
 			DIRECTION = FORWARD;
+			/*
 			if(LEFT_IR < RIGHT_IR){
 				Set_L_Speed(SPEED_35); 
         Set_R_Speed(SPEED_60);
@@ -113,6 +116,7 @@ void object_follower(){
         Set_L_Speed(SPEED_60); 
         Set_R_Speed(SPEED_60);
 			}
+			*/
 			Start_Both_Wheels();
 		}else{
 			Stop_Both_Wheels();

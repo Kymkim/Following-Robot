@@ -3,9 +3,9 @@
 <title>Static Call Graph - [.\ADCOneSample.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\ADCOneSample.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6210000: Last Updated: Mon Mar 25 12:39:38 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6210000: Last Updated: Mon Mar 25 13:16:05 2024
 <BR><P>
-<H3>Maximum Stack Usage =         96 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =         88 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 __rt_entry_main &rArr; main &rArr; object_follower &rArr; FIR_Right &rArr; med
 <P>
@@ -695,7 +695,7 @@ Global Symbols
 <P><STRONG><a name="[c4]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[85]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 88 + Unknown Stack Size
 <LI>Call Chain = __rt_entry_main &rArr; main &rArr; object_follower &rArr; FIR_Right &rArr; med
 </UL>
 <BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
@@ -840,16 +840,14 @@ Global Symbols
 <P><STRONG><a name="[95]"></a>Set_L_Speed</STRONG> (Thumb, 26 bytes, Stack size 4 bytes, motors.o(.text.Set_L_Speed))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = Set_L_Speed
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_follower
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPortF_Handler
 </UL>
 
 <P><STRONG><a name="[96]"></a>Set_R_Speed</STRONG> (Thumb, 26 bytes, Stack size 4 bytes, motors.o(.text.Set_R_Speed))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = Set_R_Speed
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_follower
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPortF_Handler
 </UL>
 
@@ -860,7 +858,6 @@ Global Symbols
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_L
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_follower
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[99]"></a>Start_L</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, motors.o(.text.Start_L))
@@ -892,15 +889,14 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[86]"></a>main</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, main.o(.text.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = main &rArr; object_follower &rArr; FIR_Right &rArr; med
+<P><STRONG><a name="[86]"></a>main</STRONG> (Thumb, 60 bytes, Stack size 24 bytes, main.o(.text.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = main &rArr; object_follower &rArr; FIR_Right &rArr; med
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_follower
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IR_Sensor_Init
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dir_Init
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_R_Speed
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_L_Speed
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_Both_Wheels
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wheels_PWM_Init
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PLL_Init
 </UL>
@@ -915,14 +911,12 @@ Global Symbols
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIR_Front
 </UL>
 
-<P><STRONG><a name="[a1]"></a>object_follower</STRONG> (Thumb, 506 bytes, Stack size 40 bytes, main.o(.text.object_follower))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = object_follower &rArr; FIR_Right &rArr; med
+<P><STRONG><a name="[a1]"></a>object_follower</STRONG> (Thumb, 424 bytes, Stack size 32 bytes, main.o(.text.object_follower))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = object_follower &rArr; FIR_Right &rArr; med
 </UL>
 <BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIR_Right
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIR_Left
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIR_Front
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_R_Speed
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_L_Speed
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stop_Both_Wheels
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_Both_Wheels
 </UL>
