@@ -3,8 +3,8 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'ADCOneSample' 
- * Target:  'ADCOneSample' 
+ * Project: 'SpaceExplorer' 
+ * Target:  'SpaceExplorer' 
  */
 
 #ifndef RTE_COMPONENTS_H

@@ -23,6 +23,19 @@
 // Modified by Min He, September 7, 2021
 #include <stdint.h>
 
+/*
+ New Pinout
+ Left
+ PWM PB4
+ DIR PB2
+ SLP PB3
+ 
+ Right
+ PWM PB5
+ DIR PB6
+ SLP PB7
+*/
+
 #define DIRECTION (*((volatile unsigned long *)0x40005330))
 #define FORWARD 			0xCC	//1100 1100, both wheels move forward
 #define BACKWARD 			0x88	//0100 0100, both wheels move backward
@@ -60,6 +73,14 @@ void Start_Both_Wheels(void);
 
 void Stop_Both_Wheels(void);
 
+void Move_Forward(void);
+void Move_Backward(void);
+void Move_Left_Pivot(void);
+void Move_Right_Pivot(void);
+void Move_Left_Forward(void);
+void Move_Right_Forward(void);
+void Move_Left_Backward(void);
+void Move_Right_Backward(void);
 
 // Change duty cycle of left wheel: PB6
 void Set_L_Speed(uint16_t duty);
@@ -72,7 +93,4 @@ void Set_R_Speed(uint16_t duty);
 // Inputs: None
 // Outputs: None
 void Dir_Init(void);
-
-// Initilize port F and arm PF4, PF0 for falling edge interrupts
-void SwitchLED_Init(void);  
 
