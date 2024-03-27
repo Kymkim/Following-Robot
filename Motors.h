@@ -82,6 +82,15 @@ void Move_Right_Forward(void);
 void Move_Left_Backward(void);
 void Move_Right_Backward(void);
 
+void Move_Forward_Follower(void);
+
+void Move_Backward_Follower(void);
+
+void Move_Right_Forward_Follower(void);
+
+void Move_Left_Forward_Follower(void);
+
+
 // Change duty cycle of left wheel: PB6
 void Set_L_Speed(uint16_t duty);
 

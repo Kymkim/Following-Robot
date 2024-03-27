@@ -49,7 +49,7 @@
 
 #define FOLLOW_DIST 2500  // ADC output for object follow distance
 #define STOP_DIST 3000 // any ADC value that is greater than this value should cause the car to stop.
-#define WALL_DIST 2800
+#define WALL_DIST 1150
 
 
 // Initializes AIN4, AIN9, and AIN8 sampling

@@ -21,7 +21,7 @@ extern void DisableInterrupts(void); // Disable interrupts
 extern void EnableInterrupts(void);  // Enable interrupts
 extern void WaitForInterrupt(void);  // low power mode
 
-int mode; //1 Object Follower, 2 Left Wall Follower, 3 Right Wall Follower
+int mode, active; //1 Object Follower, 2 Left Wall Follower, 3 Right Wall Follower
 uint16_t global_left, global_right, global_ahead;
 
 int main(void){	
@@ -30,8 +30,8 @@ int main(void){
 	ADC0_SS2_Init213();       // Initialize ADC0 Sample sequencer 2 to AIN4 (PD3), AIN9 (PE4), AIN8 (PE5)
 	Wheels_PWM_Init();
 	Dir_Init();
-	Set_L_Speed(SPEED_35);
-	Set_R_Speed(SPEED_35);
+	Set_L_Speed(SPEED_98);
+	Set_R_Speed(SPEED_98);
 	
 
   // calibrate the sensors
@@ -39,13 +39,13 @@ int main(void){
 			ReadADCMedianFilter(&global_ahead, &global_right, &global_left);
 	}	
 	
-	Move_Forward();	
 	EnableInterrupts();
 	SwitchLED_Init();
 	
 	LIGHT = RED;
 	
-	mode = 0;
+	mode = 1;
+	active = 0;
 
   while(1){
 		ReadADCMedianFilter(&global_ahead, &global_right, &global_left);
@@ -55,41 +55,59 @@ int main(void){
 
 // Simple steering function to help students get started with project 2.
 void object_steering(uint16_t ahead, uint16_t right, uint16_t left){
-	if (mode==1){
-		if ((ahead > STOP_DIST)||(left > STOP_DIST)||(right > STOP_DIST)) {
-			Stop_Both_Wheels();	
-			return;
+	if (active == 1){
+		if (mode==1){
+			LIGHT = BLUE;
+			if ((ahead > STOP_DIST)||(left > STOP_DIST)||(right > STOP_DIST)) {
+				Stop_Both_Wheels();
+				while(ahead > FOLLOW_DIST + 200){
+					Move_Backward();
+					return;
+				}
+			}
+			if (ahead < FOLLOW_DIST) { //Object Nearby. Follow Object
+				DIRECTION = FORWARD;
+				if (left < FOLLOW_DIST){  // right side is closer to an object
+					Set_R_Speed(SPEED_35);
+					Start_R();
+				}else{
+					Stop_R();
+				}
+				if (right < FOLLOW_DIST){
+					Set_L_Speed(SPEED_35);
+					Start_L(); // left side is closer to an object
+				}else{
+					Stop_L();
+				}
+				return;
+			}
 		}
-		if (ahead < FOLLOW_DIST) { //Object Nearby. Follow Object
-			if (left<right){  // right side is closer to an object
-				Move_Left_Forward();
-			}else if (left>right){
-				Move_Right_Forward();  // left side is closer to an object
-			}
-			return;
+		if ((mode == 2 ) || (mode == 3)){
+			LIGHT = GREEN;
+			if (mode == 2){ //Left Wall Follower
+				if (left < WALL_DIST){ //If none on left side
+					Move_Left_Forward();
+					return;
+				}
+				if (ahead > WALL_DIST){ //If wall ahead
+					Move_Right_Pivot();
+					return;
+				}
+			}else if (mode == 3){ //Right Wall Follower
+				if  (right < WALL_DIST){ //If none on left side
+					Move_Right_Forward();
+					return;
+				}
+				if (ahead > WALL_DIST){ //If wall ahead
+					Move_Left_Pivot();
+					return;
+				}
 		}
-	}
-	if ((mode == 2 ) || (mode == 3)){
-		if (mode == 2){ //Left Wall Follower
-			if (left < WALL_DIST){ //If none on left side
-				Move_Left_Forward();
-				return;
-			}
-			if (ahead > WALL_DIST){ //If wall ahead
-				Move_Right_Pivot();
-				return;
-			}
-		}else if (mode == 3){ //Right Wall Follower
-			if  (right < WALL_DIST){ //If none on left side
-				Move_Right_Forward();
-				return;
-			}
-			if (ahead > WALL_DIST){ //If wall ahead
-				Move_Left_Pivot();
-				return;
-			}
-	}
-	Move_Forward();
+		Move_Forward();
+		}
+	}else{
+		Stop_Both_Wheels();
+		LIGHT = RED;
 	}
 }
 
@@ -119,17 +137,26 @@ void SwitchLED_Init(void){
 }
 
 void GPIOPortF_Handler(void){
-	if(GPIO_PORTF_RIS_R&0x01){
-		GPIO_PORTF_ICR_R = 0x01;  // acknowledge flag0
-		mode = 1;
-		LIGHT = BLUE;
-	}else{
-		GPIO_PORTF_ICR_R = 0x11;  // acknowledge flag4
-		LIGHT = GREEN;
-		if(global_left > global_right){
-			mode = 2;
+	if(GPIO_PORTF_RIS_R&0x01){ //Mode toggle
+		GPIO_PORTF_ICR_R = 0x01;
+		if (active == 1){ //If only active
+			if(mode == 1){
+				if (global_left > global_right){ //Left Mode
+					mode = 2;
+				}else{
+					mode = 3;
+				}
+			}else{
+				mode = 1;
+			}
+		}
+	}else{ //Activation
+		GPIO_PORTF_ICR_R = 0x10;
+		if (active == 1){
+			active = 0;
 		}else{
-			mode = 3;
+			active = 1;
 		}
 	}
 }
+

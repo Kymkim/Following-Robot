@@ -116,16 +116,22 @@ void Stop_Both_Wheels(void) {
 
 void Move_Left_Pivot(void){
 	DIRECTION = LEFTPIVOT;
+	Set_R_Speed(SPEED_98);
+	Set_L_Speed(SPEED_98);
 	Start_Both_Wheels();
 }
 
 void Move_Right_Pivot(void){
 	DIRECTION = RIGHTPIVOT;
+	Set_R_Speed(SPEED_98);
+	Set_L_Speed(SPEED_98);
 	Start_Both_Wheels();
 }
 
 void Move_Forward(void){
 	DIRECTION = FORWARD;
+	Set_R_Speed(SPEED_98);
+	Set_L_Speed(SPEED_98);
 	Start_Both_Wheels();
 }	
 
@@ -136,24 +142,57 @@ void Move_Backward(void){
 
 void Move_Right_Forward(void){
 	DIRECTION = FORWARD;
-	Start_R();
-	Stop_L();
+	Set_R_Speed(SPEED_80);
+	Set_L_Speed(SPEED_35);
+	Start_Both_Wheels();
 }
 
 void Move_Left_Forward(void){
 	DIRECTION = FORWARD;
-	Stop_R();
-	Start_L();
+	Set_R_Speed(SPEED_35);
+	Set_L_Speed(SPEED_80);
+	Start_Both_Wheels();
 }
 
 void Move_Right_Backward(void){
 	DIRECTION = BACKWARD;
-	Start_R();
 	Stop_L();
+	Set_R_Speed(SPEED_35);
+	Start_R();
 }
 
 void Move_Left_Backward(void){
 	DIRECTION = BACKWARD;
+	Stop_R();
+	Set_L_Speed(SPEED_35);
+	Start_L();
+}
+
+
+void Move_Forward_Follower(void){
+	DIRECTION = FORWARD;
+	Set_R_Speed(SPEED_35);
+	Set_L_Speed(SPEED_35);
+	Start_Both_Wheels();
+}	
+
+void Move_Backward_Follower(void){
+	DIRECTION = BACKWARD;
+	Set_R_Speed(SPEED_35);
+	Set_L_Speed(SPEED_35);
+	Start_Both_Wheels();
+}
+
+void Move_Right_Forward_Follower(void){
+	DIRECTION = FORWARD;
+	Set_R_Speed(SPEED_35);
+	Stop_L();
+	Start_R();
+}
+
+void Move_Left_Forward_Follower(void){
+	DIRECTION = FORWARD;
+	Set_L_Speed(SPEED_35);
 	Stop_R();
 	Start_L();
 }

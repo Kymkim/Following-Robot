@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\SpaceExplorer.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\SpaceExplorer.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6210000: Last Updated: Tue Mar 26 23:48:32 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6210000: Last Updated: Wed Mar 27 12:54:19 2024
 <BR><P>
 <H3>Maximum Stack Usage =        108 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -13,11 +13,11 @@ __rt_entry_main &rArr; main &rArr; ReadADCMedianFilter &rArr; ADC0_SS2_In213
 Functions with no stack information
 </H3><UL>
  <LI><a href="#[0]">Reset_Handler</a>
- <LI><a href="#[ca]">DisableInterrupts</a>
- <LI><a href="#[a2]">EnableInterrupts</a>
- <LI><a href="#[cb]">StartCritical</a>
- <LI><a href="#[cc]">EndCritical</a>
- <LI><a href="#[cd]">WaitForInterrupt</a>
+ <LI><a href="#[cb]">DisableInterrupts</a>
+ <LI><a href="#[a3]">EnableInterrupts</a>
+ <LI><a href="#[cc]">StartCritical</a>
+ <LI><a href="#[cd]">EndCritical</a>
+ <LI><a href="#[ce]">WaitForInterrupt</a>
  <LI><a href="#[8c]">__user_initial_stackheap</a>
 </UL>
 </UL>
@@ -594,86 +594,86 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
 </UL>
 
-<P><STRONG><a name="[a5]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[a6]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
-<P><STRONG><a name="[a6]"></a>__scatterload_loop</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[a7]"></a>__scatterload_loop</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
-<P><STRONG><a name="[a7]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, __scatter.o(!!handler_null), UNUSED)
+<P><STRONG><a name="[a8]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, __scatter.o(!!handler_null), UNUSED)
 
-<P><STRONG><a name="[a8]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
+<P><STRONG><a name="[a9]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
 
 <P><STRONG><a name="[83]"></a>__rt_lib_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit.o(.ARM.Collect$$libinit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_li
 </UL>
 
-<P><STRONG><a name="[a9]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
+<P><STRONG><a name="[aa]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
 
-<P><STRONG><a name="[aa]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
+<P><STRONG><a name="[ab]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
 
-<P><STRONG><a name="[ab]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
+<P><STRONG><a name="[ac]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
 
-<P><STRONG><a name="[ac]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
+<P><STRONG><a name="[ad]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
 
-<P><STRONG><a name="[ad]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000034))
+<P><STRONG><a name="[ae]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000034))
 
-<P><STRONG><a name="[ae]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
+<P><STRONG><a name="[af]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
 
-<P><STRONG><a name="[af]"></a>__rt_lib_init_fp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000002))
+<P><STRONG><a name="[b0]"></a>__rt_lib_init_fp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000002))
 
-<P><STRONG><a name="[b0]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
+<P><STRONG><a name="[b1]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
 
-<P><STRONG><a name="[b1]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
+<P><STRONG><a name="[b2]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
 
-<P><STRONG><a name="[b2]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
+<P><STRONG><a name="[b3]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
 
-<P><STRONG><a name="[b3]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
+<P><STRONG><a name="[b4]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
 
-<P><STRONG><a name="[b4]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
+<P><STRONG><a name="[b5]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
 
-<P><STRONG><a name="[b5]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
+<P><STRONG><a name="[b6]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
 
-<P><STRONG><a name="[b6]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
+<P><STRONG><a name="[b7]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
 
-<P><STRONG><a name="[b7]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
+<P><STRONG><a name="[b8]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
 
-<P><STRONG><a name="[b8]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000006))
+<P><STRONG><a name="[b9]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000006))
 
-<P><STRONG><a name="[b9]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000010))
+<P><STRONG><a name="[ba]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000010))
 
-<P><STRONG><a name="[ba]"></a>__rt_lib_init_relocate_pie_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
+<P><STRONG><a name="[bb]"></a>__rt_lib_init_relocate_pie_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
 
-<P><STRONG><a name="[bb]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000035))
+<P><STRONG><a name="[bc]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000035))
 
-<P><STRONG><a name="[bc]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
+<P><STRONG><a name="[bd]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
 
-<P><STRONG><a name="[bd]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000027))
+<P><STRONG><a name="[be]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000027))
 
-<P><STRONG><a name="[be]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
+<P><STRONG><a name="[bf]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
 
 <P><STRONG><a name="[88]"></a>__rt_lib_shutdown</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown.o(.ARM.Collect$$libshutdown$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_ls
 </UL>
 
-<P><STRONG><a name="[bf]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
+<P><STRONG><a name="[c0]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
 
-<P><STRONG><a name="[c0]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
+<P><STRONG><a name="[c1]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
 
-<P><STRONG><a name="[c1]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
+<P><STRONG><a name="[c2]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
 
-<P><STRONG><a name="[c2]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
+<P><STRONG><a name="[c3]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
 
-<P><STRONG><a name="[c3]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
+<P><STRONG><a name="[c4]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
 
-<P><STRONG><a name="[c4]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
+<P><STRONG><a name="[c5]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
 
-<P><STRONG><a name="[c5]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
+<P><STRONG><a name="[c6]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
 
 <P><STRONG><a name="[7e]"></a>__rt_entry</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry.o(.ARM.Collect$$rtentry$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
 </UL>
 
-<P><STRONG><a name="[c6]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
+<P><STRONG><a name="[c7]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
 
 <P><STRONG><a name="[80]"></a>__rt_entry_sh</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry4.o(.ARM.Collect$$rtentry$$00000004))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -686,7 +686,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init
 </UL>
 
-<P><STRONG><a name="[c7]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
+<P><STRONG><a name="[c8]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[84]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
 <BR><BR>[Stack]<UL><LI>Max Depth = 108 + Unknown Stack Size
@@ -696,7 +696,7 @@ Global Symbols
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c8]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
+<P><STRONG><a name="[c9]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
 
 <P><STRONG><a name="[8d]"></a>__rt_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit.o(.ARM.Collect$$rtexit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
@@ -706,33 +706,33 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown
 </UL>
 
-<P><STRONG><a name="[c9]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
+<P><STRONG><a name="[ca]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
 
 <P><STRONG><a name="[89]"></a>__rt_exit_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
 </UL>
 
-<P><STRONG><a name="[ca]"></a>DisableInterrupts</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
+<P><STRONG><a name="[cb]"></a>DisableInterrupts</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
 
-<P><STRONG><a name="[a2]"></a>EnableInterrupts</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text))
+<P><STRONG><a name="[a3]"></a>EnableInterrupts</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[cb]"></a>StartCritical</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
+<P><STRONG><a name="[cc]"></a>StartCritical</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
 
-<P><STRONG><a name="[cc]"></a>EndCritical</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
+<P><STRONG><a name="[cd]"></a>EndCritical</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
 
-<P><STRONG><a name="[cd]"></a>WaitForInterrupt</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
+<P><STRONG><a name="[ce]"></a>WaitForInterrupt</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
 
 <P><STRONG><a name="[8c]"></a>__user_initial_stackheap</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[ce]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[cf]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[cf]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[d0]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[d0]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[d1]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
 <P><STRONG><a name="[81]"></a>__user_setup_stackheap</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, sys_stackheap_outer.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -753,197 +753,233 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[d1]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[d2]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[8b]"></a>__user_perproc_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[d2]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[d3]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[8a]"></a>_sys_exit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, sys_exit.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
 </UL>
 
-<P><STRONG><a name="[d3]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[d4]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[d4]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[d5]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[d5]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
+<P><STRONG><a name="[d6]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[99]"></a>ADC0_SS2_In213</STRONG> (Thumb, 96 bytes, Stack size 12 bytes, adc0ss2.o(.text.ADC0_SS2_In213))
+<P><STRONG><a name="[98]"></a>ADC0_SS2_In213</STRONG> (Thumb, 96 bytes, Stack size 12 bytes, adc0ss2.o(.text.ADC0_SS2_In213))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = ADC0_SS2_In213
 </UL>
-<BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadADCMedianFilter
+<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadADCMedianFilter
 </UL>
 
-<P><STRONG><a name="[9d]"></a>ADC0_SS2_Init213</STRONG> (Thumb, 246 bytes, Stack size 4 bytes, adc0ss2.o(.text.ADC0_SS2_Init213))
+<P><STRONG><a name="[a0]"></a>ADC0_SS2_Init213</STRONG> (Thumb, 246 bytes, Stack size 4 bytes, adc0ss2.o(.text.ADC0_SS2_Init213))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = ADC0_SS2_Init213
 </UL>
 <BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[9f]"></a>Dir_Init</STRONG> (Thumb, 122 bytes, Stack size 0 bytes, motors.o(.text.Dir_Init))
+<P><STRONG><a name="[a2]"></a>Dir_Init</STRONG> (Thumb, 122 bytes, Stack size 0 bytes, motors.o(.text.Dir_Init))
 <BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[28]"></a>GPIOPortF_Handler</STRONG> (Thumb, 134 bytes, Stack size 0 bytes, spaceexplorer.o(.text.GPIOPortF_Handler))
+<P><STRONG><a name="[28]"></a>GPIOPortF_Handler</STRONG> (Thumb, 194 bytes, Stack size 0 bytes, spaceexplorer.o(.text.GPIOPortF_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
 </UL>
-<P><STRONG><a name="[8e]"></a>Move_Forward</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, motors.o(.text.Move_Forward))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Move_Forward &rArr; Start_Both_Wheels
+<P><STRONG><a name="[8e]"></a>Move_Backward</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, motors.o(.text.Move_Backward))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Move_Backward &rArr; Start_Both_Wheels
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_Both_Wheels
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
 </UL>
 
-<P><STRONG><a name="[90]"></a>Move_Left_Forward</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, motors.o(.text.Move_Left_Forward))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Move_Left_Forward
+<P><STRONG><a name="[90]"></a>Move_Forward</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, motors.o(.text.Move_Forward))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Move_Forward &rArr; Start_Both_Wheels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stop_R
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_L
+<BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_L_Speed
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_R_Speed
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_Both_Wheels
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
-</UL>
-
-<P><STRONG><a name="[93]"></a>Move_Left_Pivot</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, motors.o(.text.Move_Left_Pivot))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Move_Left_Pivot &rArr; Start_Both_Wheels
-</UL>
-<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_Both_Wheels
-</UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
+<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
 </UL>
 
-<P><STRONG><a name="[94]"></a>Move_Right_Forward</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, motors.o(.text.Move_Right_Forward))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Move_Right_Forward
+<P><STRONG><a name="[93]"></a>Move_Left_Forward</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, motors.o(.text.Move_Left_Forward))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Move_Left_Forward &rArr; Start_Both_Wheels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stop_L
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_R
+<BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_L_Speed
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_R_Speed
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_Both_Wheels
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
-</UL>
-
-<P><STRONG><a name="[97]"></a>Move_Right_Pivot</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, motors.o(.text.Move_Right_Pivot))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Move_Right_Pivot &rArr; Start_Both_Wheels
-</UL>
-<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_Both_Wheels
-</UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
+<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
 </UL>
 
-<P><STRONG><a name="[9c]"></a>PLL_Init</STRONG> (Thumb, 132 bytes, Stack size 4 bytes, pll.o(.text.PLL_Init))
+<P><STRONG><a name="[94]"></a>Move_Left_Pivot</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, motors.o(.text.Move_Left_Pivot))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Move_Left_Pivot &rArr; Start_Both_Wheels
+</UL>
+<BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_L_Speed
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_R_Speed
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_Both_Wheels
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
+</UL>
+
+<P><STRONG><a name="[95]"></a>Move_Right_Forward</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, motors.o(.text.Move_Right_Forward))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Move_Right_Forward &rArr; Start_Both_Wheels
+</UL>
+<BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_L_Speed
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_R_Speed
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_Both_Wheels
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
+</UL>
+
+<P><STRONG><a name="[96]"></a>Move_Right_Pivot</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, motors.o(.text.Move_Right_Pivot))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Move_Right_Pivot &rArr; Start_Both_Wheels
+</UL>
+<BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_L_Speed
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_R_Speed
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_Both_Wheels
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
+</UL>
+
+<P><STRONG><a name="[9f]"></a>PLL_Init</STRONG> (Thumb, 132 bytes, Stack size 4 bytes, pll.o(.text.PLL_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = PLL_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[98]"></a>ReadADCMedianFilter</STRONG> (Thumb, 182 bytes, Stack size 56 bytes, adc0ss2.o(.text.ReadADCMedianFilter))
+<P><STRONG><a name="[97]"></a>ReadADCMedianFilter</STRONG> (Thumb, 182 bytes, Stack size 56 bytes, adc0ss2.o(.text.ReadADCMedianFilter))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = ReadADCMedianFilter &rArr; ADC0_SS2_In213
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;median
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_SS2_In213
+<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;median
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_SS2_In213
 </UL>
 <BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a0]"></a>Set_L_Speed</STRONG> (Thumb, 26 bytes, Stack size 4 bytes, motors.o(.text.Set_L_Speed))
+<P><STRONG><a name="[92]"></a>Set_L_Speed</STRONG> (Thumb, 26 bytes, Stack size 4 bytes, motors.o(.text.Set_L_Speed))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = Set_L_Speed
 </UL>
-<BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Left_Forward
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Right_Forward
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Forward
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Right_Pivot
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Left_Pivot
 </UL>
 
-<P><STRONG><a name="[a1]"></a>Set_R_Speed</STRONG> (Thumb, 26 bytes, Stack size 4 bytes, motors.o(.text.Set_R_Speed))
+<P><STRONG><a name="[91]"></a>Set_R_Speed</STRONG> (Thumb, 26 bytes, Stack size 4 bytes, motors.o(.text.Set_R_Speed))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = Set_R_Speed
 </UL>
-<BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Left_Forward
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Right_Forward
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Forward
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Right_Pivot
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Left_Pivot
 </UL>
 
 <P><STRONG><a name="[8f]"></a>Start_Both_Wheels</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, motors.o(.text.Start_Both_Wheels))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Start_Both_Wheels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_R
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_L
+<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_R
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_L
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Forward
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Right_Pivot
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Left_Pivot
+<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Left_Forward
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Right_Forward
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Backward
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Forward
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Right_Pivot
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Left_Pivot
 </UL>
 
-<P><STRONG><a name="[92]"></a>Start_L</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, motors.o(.text.Start_L))
-<BR><BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Left_Forward
+<P><STRONG><a name="[9b]"></a>Start_L</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, motors.o(.text.Start_L))
+<BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_Both_Wheels
 </UL>
 
-<P><STRONG><a name="[95]"></a>Start_R</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, motors.o(.text.Start_R))
-<BR><BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Right_Forward
+<P><STRONG><a name="[9a]"></a>Start_R</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, motors.o(.text.Start_R))
+<BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_Both_Wheels
 </UL>
 
-<P><STRONG><a name="[9b]"></a>Stop_Both_Wheels</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, motors.o(.text.Stop_Both_Wheels))
+<P><STRONG><a name="[9c]"></a>Stop_Both_Wheels</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, motors.o(.text.Stop_Both_Wheels))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Stop_Both_Wheels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stop_R
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stop_L
+<BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stop_R
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stop_L
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
-</UL>
-
-<P><STRONG><a name="[96]"></a>Stop_L</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, motors.o(.text.Stop_L))
-<BR><BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Right_Forward
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stop_Both_Wheels
+<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
 </UL>
 
-<P><STRONG><a name="[91]"></a>Stop_R</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, motors.o(.text.Stop_R))
-<BR><BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Left_Forward
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stop_Both_Wheels
+<P><STRONG><a name="[9d]"></a>Stop_L</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, motors.o(.text.Stop_L))
+<BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stop_Both_Wheels
 </UL>
 
-<P><STRONG><a name="[a3]"></a>SwitchLED_Init</STRONG> (Thumb, 298 bytes, Stack size 4 bytes, spaceexplorer.o(.text.SwitchLED_Init))
+<P><STRONG><a name="[9e]"></a>Stop_R</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, motors.o(.text.Stop_R))
+<BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stop_Both_Wheels
+</UL>
+
+<P><STRONG><a name="[a4]"></a>SwitchLED_Init</STRONG> (Thumb, 298 bytes, Stack size 4 bytes, spaceexplorer.o(.text.SwitchLED_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = SwitchLED_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[9e]"></a>Wheels_PWM_Init</STRONG> (Thumb, 242 bytes, Stack size 0 bytes, motors.o(.text.Wheels_PWM_Init))
+<P><STRONG><a name="[a1]"></a>Wheels_PWM_Init</STRONG> (Thumb, 242 bytes, Stack size 0 bytes, motors.o(.text.Wheels_PWM_Init))
 <BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[85]"></a>main</STRONG> (Thumb, 192 bytes, Stack size 40 bytes, spaceexplorer.o(.text.main))
+<P><STRONG><a name="[85]"></a>main</STRONG> (Thumb, 200 bytes, Stack size 40 bytes, spaceexplorer.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 108 + Unknown Stack Size
 <LI>Call Chain = main &rArr; ReadADCMedianFilter &rArr; ADC0_SS2_In213
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SwitchLED_Init
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dir_Init
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_R_Speed
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_L_Speed
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Forward
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wheels_PWM_Init
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadADCMedianFilter
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_SS2_Init213
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PLL_Init
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableInterrupts
+<BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;object_steering
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SwitchLED_Init
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dir_Init
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_L_Speed
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_R_Speed
+<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wheels_PWM_Init
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadADCMedianFilter
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_SS2_Init213
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PLL_Init
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableInterrupts
 </UL>
 <BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[9a]"></a>median</STRONG> (Thumb, 160 bytes, Stack size 8 bytes, adc0ss2.o(.text.median))
+<P><STRONG><a name="[99]"></a>median</STRONG> (Thumb, 160 bytes, Stack size 8 bytes, adc0ss2.o(.text.median))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = median
 </UL>
-<BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadADCMedianFilter
+<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadADCMedianFilter
 </UL>
 
-<P><STRONG><a name="[a4]"></a>object_steering</STRONG> (Thumb, 292 bytes, Stack size 16 bytes, spaceexplorer.o(.text.object_steering))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = object_steering &rArr; Move_Forward &rArr; Start_Both_Wheels
+<P><STRONG><a name="[a5]"></a>object_steering</STRONG> (Thumb, 422 bytes, Stack size 16 bytes, spaceexplorer.o(.text.object_steering))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = object_steering &rArr; Move_Forward &rArr; Start_Both_Wheels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Left_Forward
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Right_Forward
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Forward
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Right_Pivot
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Left_Pivot
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stop_Both_Wheels
+<BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Left_Forward
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Right_Forward
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Backward
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Forward
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Right_Pivot
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_L_Speed
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_R_Speed
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Move_Left_Pivot
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stop_Both_Wheels
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stop_R
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stop_L
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_R
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Start_L
 </UL>
 <BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
